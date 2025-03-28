@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <section class="bg-white bg-opacity-5 py-10">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="w-[40%] space-y-6">
+    <section class="bg-white bg-opacity-5 py-20 px-4 xl:px-0">
+        <div class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-[50%] xl:w-[40%] space-y-6">
                 <h2 class="font-bold leading-tight text-[30px]">
                     Why You Need an Algo Trading Dashboard
                 </h2>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[40%]">
+            <div class="w-full mt-8 xl:mt-0 md:w-[50%] xl:w-[40%]">
                 <img src="/images/why_image.webp" alt="">
             </div>
         </div>

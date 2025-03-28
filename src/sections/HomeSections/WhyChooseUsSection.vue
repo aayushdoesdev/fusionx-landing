@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <section class="bg-custom-teal py-20">
-    <div class="max-w-7xl mx-auto">
+  <section class="bg-custom-teal py-10 md:py-20 px-4 xl:px-0">
+    <div class="max-w-6xl 2xl:max-w-7xl mx-auto">
       <div class="text-center">
         <h1 class="font-bold text-[30px]">Why Choose Our Algo Trading Dashboard?</h1>
         <p class="nrml-text">
@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-3 mt-16 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-16 gap-10">
         <div class="space-y-1">
             <img src="/svg/verified.svg" alt="">
             <p class="font-bold">Battle-Tested Strategies</p>

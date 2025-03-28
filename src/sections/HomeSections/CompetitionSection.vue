@@ -25,12 +25,12 @@ const fusion = [
 </script>
 
 <template>
-  <section class="max-w-7xl mx-auto py-20">
+  <section class="max-w-6xl 2xl:max-w-7xl mx-auto py-20 px-4 xl:px-0">
     <div class="text-center">
       <h1 class="font-bold text-[30px]">Why Choose Us Over the Competition?</h1>
     </div>
 
-    <div class="grid grid-cols-2 w-[80%] gap-8 mx-auto mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full xl:w-[80%] gap-8 mx-auto mt-12">
       <div class="border border-dashed border-custom-red bg-custom-red bg-opacity-15 py-8 px-8 rounded-xl">
         <div class="relative">
           <p class="font-bold text-[32px]">Other Algo</p>

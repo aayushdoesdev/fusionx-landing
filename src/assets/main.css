@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+      background-color: transparent !important;
+      color: white !important;  /* Set text color */
+      -webkit-text-fill-color: white !important; /* Ensures autofill text color */
+      transition: background-color 9999s ease-in-out;
+      caret-color: white !important; /* White cursor */
+    }
+  }
+
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Red Hat Display', sans-serif;
@@ -15,6 +31,10 @@ body {
 
 .nrml-text {
     @apply text-[16px]
+}
+
+.hover-text {
+    @apply hover:text-custom-teal transition-all text-[16px]
 }
 
 .border-btn{
