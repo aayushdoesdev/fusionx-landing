@@ -8,7 +8,7 @@
       <p>❤️ Loved by 5 lakh+ investors</p>
     </div>
 
-    <h1 class="font-extrabold text-center text-[40px] xl:leading-[80px]  md:text-[60px]">Powering Smarter,<br/> Automated Investments</h1>
+    <h1 class="font-extrabold text-center text-[34px] xl:leading-[80px]  md:text-[60px] leading-tight">Powering Smarter,<br/> Automated Investments</h1>
 
     <p class="nrml-text">Invest Smarter. Faster. Stress-Free.</p>
   </section>

@@ -152,7 +152,7 @@ const logout = async () => {
       <a href="/#feature" class="hover-text">Features</a>
       <!-- <a href="/#why" class="hover-text">Why Us</a> -->
       <a href="/#pricing" class="hover-text">Pricing</a>
-      <a href="/#faq" class="hover-text">FAQ</a>
+      <button type="button" @click="router.push('/faq')" class="hover-text">FAQ's</button>
 
       <div class="flex gap-4" v-if="!logged">
         <!-- <button class="border-btn">Sign Up</button> -->
@@ -174,11 +174,11 @@ const logout = async () => {
   <!-- Sidebar -->
   <div ref="closeSidebar" :class="{ 'translate-x-0': isOpen, '-translate-x-full': !isOpen }"
     class="bg-[#151719] z-50 absolute left-0 w-[75%] top-0 transform transition-transform duration-300 ease-in-out p-8 text-white space-y-4 h-[100dvh] md:w-[45%] xl:hidden">
-    <router-link to="/about"
+    <router-link to="/about"  @click="isOpen = false"
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Why Us
     </router-link>
-    <a href="/#feature"
+    <a href="/#feature"  @click="isOpen = false"
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Features
     </a>
@@ -186,14 +186,14 @@ const logout = async () => {
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Why us
     </a> -->
-    <a href="/#pricing"
+    <a href="/#pricing"  @click="isOpen = false"
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Pricing
     </a>
-    <a href="/#faq"
+    <button type="button" @click="router.push('/faq', isOpen = false)"
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
-      FAQ
-    </a>
+      FAQ's
+    </button>
 
     <div class="flex gap-4" v-if="!logged">
       <!-- <button class="border-btn">Sign Up</button> -->
@@ -292,7 +292,7 @@ const logout = async () => {
         <ForgotPassSection @close="showForm('login')" />
       </div>
 
-      <div class="flex flex-col items-center justify-between text-white mt-4">
+      <!-- <div class="flex flex-col items-center justify-between text-white mt-4">
         <div class="nrml-text flex items-center justify-between gap-4 w-full">
           <div class="w-full h-[1px] bg-white bg-opacity-20"></div>
           <p class="whitespace-nowrap">Or continue with</p>
@@ -304,7 +304,7 @@ const logout = async () => {
           <button class="pi pi-apple text-[25px]"></button>
           <button class="pi pi-microsoft text-[25px]"></button>
         </div>
-      </div>
+      </div> -->
 
       <p class="nrml-text text-white text-center mt-4">
         Don't have an account?

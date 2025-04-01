@@ -1,11 +1,30 @@
 <script setup>
+import LottieAnimation from '@/components/LottieAnimation.vue';
 
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
 </script>
 
 <template>
-    <section class="bg-white bg-opacity-5 py-20 lg:py-32 mt-24 px-4 xl:px-0">
+    <section class="bg-white bg-opacity-5 py-20 lg:py-32 mt-24 px-4 xl:px-0 animate-on-scroll">
         <div class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div class="w-full md:w-[50%] xl:w-[40%] space-y-6">
+            <div class="w-full md:w-[50%] xl:w-[50%] space-y-6">
                 <h2 class="font-bold leading-tight text-[30px]">
                     Why You Need an Algo Trading Dashboard
                 </h2>
@@ -27,10 +46,31 @@
                 </div>
             </div>
             <div class="w-full mt-8 xl:mt-0 md:w-[50%] xl:w-[40%]">
-                <img src="/images/why_image.webp" alt="">
+                <LottieAnimation animationPath="/animations/webanim.json"/>
             </div>
         </div>
     </section>
 </template>
 
+<style scoped>
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 0.8s ease-out, transform 1.2s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+</style>

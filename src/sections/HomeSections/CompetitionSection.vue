@@ -1,5 +1,22 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
 
 const otherAlgo = [
     "Execution lags or manual confirmation needed",
@@ -25,7 +42,7 @@ const fusion = [
 </script>
 
 <template>
-  <section class="max-w-6xl 2xl:max-w-7xl mx-auto py-20 my-16 lg:mt-24 px-4 xl:px-0">
+  <section class="max-w-6xl 2xl:max-w-7xl mx-auto py-20 my-16 lg:mt-24 px-4 xl:px-0 animate-on-scroll">
     <div class="text-center">
       <h1 class="font-bold text-[30px]">Why Choose Us Over the Competition?</h1>
     </div>
@@ -66,3 +83,27 @@ const fusion = [
     </div>
   </section>
 </template>
+
+
+<style scoped>
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 0.8s ease-out, transform 1.2s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+</style>

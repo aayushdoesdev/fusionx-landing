@@ -1,21 +1,40 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
+</script>
 
 <template>
-  <section class="min-h-[90vh] lg:bg max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between px-4 xl:px-0 py-8">
-    <div class="w-full xl:w-[50%]">
+  <section class="min-h-[90vh] lg:bg max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between px-4 xl:px-0 py-8 animate-on-scroll">
+    <div class="w-full xl:w-[50%] space-y-4">
       <div
         class="border border-white bg-white bg-opacity-20 w-fit px-6 py-2 rounded-full nrml-text"
       >
         <p>❤️ Smart Automation For Smart Traders</p>
       </div>
       <div class="mt-4 xl:leading-[70px]">
-        <h1 class="font-extrabold text-[60px] xl:text-[60px] 2xl:text-[70px] leading-tight">The Future of Investing</h1>
+        <h1 class="font-extrabold text-[50px] xl:text-[60px] 2xl:text-[70px] leading-tight">The Future of Investing</h1>
         <h3 class="font-semibold text-[25px] 2xl:text-[30px]">
            Seamless, Smart & Stress Free.
         </h3>
       </div>
 
-      <p class="nrml-text xl:mt-6 w-[80%]">
+      <p class="nrml-text xl:mt-6 md:w-[80%]">
         A Smart Trading Assistant designed to analyse market trends, make swift
         decisions & execute trade seamlessly
       </p>
@@ -64,5 +83,26 @@
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 0.8s ease-out, transform 1.2s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 </style>

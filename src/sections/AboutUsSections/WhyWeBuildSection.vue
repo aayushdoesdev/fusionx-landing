@@ -14,23 +14,23 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 mt-16 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-16 gap-10 justify-items-center text-center md:justify-items-start md:text-left">
       <div class="space-y-2">
-        <img src="/svg/verified.svg" alt="" />
+        <img src="/svg/verified.svg" alt="" class="justify-self-center md:justify-self-start"/>
         <p class="nrml-text">
           No coding, no headaches—just pick a strategy, customize basic settings
           like lot size and re-entry rules, and hit deploy.
         </p>
       </div>
       <div class="space-y-2">
-        <img src="/svg/verified.svg" alt="" />
+        <img src="/svg/verified.svg" alt="" class="justify-self-center md:justify-self-start"/>
         <p class="nrml-text">
           Our system handles real-time execution and risk management
           automatically, ensuring you never miss a trade.
         </p>
       </div>
       <div class="space-y-2">
-        <img src="/svg/verified.svg" alt="" />
+        <img src="/svg/verified.svg" alt="" class="justify-self-center md:justify-self-start"/>
         <p class="nrml-text">
           Plus, with detailed performance analytics, you’ll know exactly how
           your investments are performing—without ever lifting a finger.

@@ -6,7 +6,7 @@ import WhatWeDoSection from '@/sections/AboutUsSections/WhatWeDoSection.vue';
 import WhyWeBuildSection from '@/sections/AboutUsSections/WhyWeBuildSection.vue';
 import CommitmentSection from '@/sections/AboutUsSections/CommitmentSection.vue';
 import WhyYouLoveSection from '@/sections/AboutUsSections/WhyYouLoveSection.vue';
-import FaqSection from '@/sections/AboutUsSections/FaqSection.vue';
+import FaqSection from '@/sections/HomeSections/FaqSection.vue';
 import TradeSmarterSection from '@/sections/HomeSections/TradeSmarterSection.vue';
 </script>
 
