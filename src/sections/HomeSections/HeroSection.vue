@@ -1,18 +1,18 @@
 <script setup></script>
 
 <template>
-  <section class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between px-4 xl:px-0 py-8">
+  <section class="min-h-[90vh] lg:bg max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between px-4 xl:px-0 py-8">
     <div class="w-full xl:w-[50%]">
       <div
         class="border border-white bg-white bg-opacity-20 w-fit px-6 py-2 rounded-full nrml-text"
       >
-        <p>❤️ Loved by 5 lakh+ investors</p>
+        <p>❤️ Smart Automation For Smart Traders</p>
       </div>
       <div class="mt-4 xl:leading-[70px]">
+        <h1 class="font-extrabold text-[60px] xl:text-[60px] 2xl:text-[70px] leading-tight">The Future of Investing</h1>
         <h3 class="font-semibold text-[25px] 2xl:text-[30px]">
-          The Future of Investing- Seamless, Smart &
+           Seamless, Smart & Stress Free.
         </h3>
-        <h1 class="font-extrabold text-[60px] xl:text-[80px] 2xl:text-[100px]">Stress Free.</h1>
       </div>
 
       <p class="nrml-text xl:mt-6 w-[80%]">
@@ -42,8 +42,9 @@
         <button class="border-btn">Open an Account</button>
       </div>
     </div>
-    <div class="w-full xl:w-[50%]">
+    <div class="w-full xl:w-[50%] h-full">
       <img src="/images/hero_image.webp" alt="" />
+       
     </div>
   </section>
 </template>
@@ -56,5 +57,12 @@
   filter: blur(80px);
   transform: translate(-50%, -20%);
   animation: glowAnimation 4s ease-in-out infinite alternate;
+}
+
+.bg{
+  background-image: url('/public/images/hero_image.webp');
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>

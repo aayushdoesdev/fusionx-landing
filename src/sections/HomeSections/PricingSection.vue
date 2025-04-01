@@ -54,19 +54,21 @@ const removeFromCart = (item) => {
 </script>
 
 <template>
-  <section class="pt-10 pb-20 relative px-4 xl:px-0">
+  <section class="pb-20 relative px-4 xl:px-0">
     <div
       class="space-y-2 text-center max-w-6xl 2xl:max-w-7xl mx-auto relative z-20"
     >
       <h1 class="font-bold text-[30px]">Pricing & Plans</h1>
-      <p class="nrml-text w-[60%] mx-auto">
+      <p class="nrml-text lg:w-[60%] mx-auto">
         Skip the guesswork. Our SaaS platform offers a suite of expertly
         designed, backtested trading strategies, ready to deploy with a single
         click.
       </p>
     </div>
+    <div class="w-full py-24 bg">
 
-    <div class="text-white overflow-x-auto max-w-7xl mx-auto mt-20 rounded-xl relative z-20">
+    
+    <div class="text-white overflow-x-auto max-w-7xl mx-auto  rounded-xl relative z-20">
       <table class="w-full">
         <thead>
           <tr
@@ -135,13 +137,23 @@ const removeFromCart = (item) => {
       </table>
 
     </div>
-    <div class="hidden md:block absolute top-[30%] left-[0px]">
-      <img src="/images/light.webp" alt="" class="w-[700px]">
+  </div>
+    <!-- <div class="hidden md:block absolute top-[30%] left-[0px]">
+      <img src="/images/light.webp" alt="" class="w-[760px]">
     </div>
     <div class="hidden md:block absolute top-[30%] right-[0px]">
-      <img src="/images/light2.webp" alt="" class="w-[700px]">
-    </div>
+      <img src="/images/light2.webp" alt="" class="w-[760px]">
+    </div> -->
 
     <Cart :cart="selectedProducts" :removeFromCart="removeFromCart" :billingPeriod="billingPeriod" />
   </section>
 </template>
+
+<style scoped>
+.bg{
+  background-image: url('/public/images/pricing-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>

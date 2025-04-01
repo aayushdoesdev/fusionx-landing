@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="bg-custom-teal py-10 md:py-20 px-4 xl:px-0">
+  <section class="bg-custom-teal py-10 md:py-20 lg:py-32 mt-16 lg:mt-24 px-4 xl:px-0">
     <div class="max-w-6xl 2xl:max-w-7xl mx-auto">
       <div class="text-center">
         <h1 class="font-bold text-[30px]">Why Choose Our Algo Trading Dashboard?</h1>

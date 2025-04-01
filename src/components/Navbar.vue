@@ -141,28 +141,24 @@ const logout = async () => {
 </script>
 
 <template>
-  <nav
-    class="max-w-6xl 2xl:max-w-7xl mx-auto flex items-center justify-between px-4 xl:px-0 py-6 relative z-20"
-  >
+  <nav class="max-w-6xl 2xl:max-w-7xl mx-auto flex items-center justify-between px-4 xl:px-0 py-6 relative z-20">
     <div @click="router.push('/')" class="cursor-pointer">
       <img src="/svg/Logo.svg" alt="" />
     </div>
 
     <div class="hidden text-white xl:flex items-center gap-8">
-      <router-link
-        to="/about"
-        class="hover-text"
-        :class="{ 'text-custom-teal': route.path === '/about' }"
-        >About</router-link
-      >
-      <a href="/#feature" class="hover-text">Feature</a>
-      <a href="/#why" class="hover-text">Why Us</a>
+      <router-link to="/about" class="hover-text"
+        :class="{ 'text-custom-teal': route.path === '/about' }">Why Us</router-link>
+      <a href="/#feature" class="hover-text">Features</a>
+      <!-- <a href="/#why" class="hover-text">Why Us</a> -->
       <a href="/#pricing" class="hover-text">Pricing</a>
       <a href="/#faq" class="hover-text">FAQ</a>
 
       <div class="flex gap-4" v-if="!logged">
-        <button class="border-btn">Sign Up</button>
-        <button @click="togglePopup(true)" class="bg-btn">Login</button>
+        <!-- <button class="border-btn">Sign Up</button> -->
+        <button @click="togglePopup(true)" class="bg-btn">
+          <p class="text-transparent shine-text">Login</p>
+        </button>
       </div>
 
       <div class="" v-if="logged">
@@ -176,40 +172,31 @@ const logout = async () => {
   </nav>
 
   <!-- Sidebar -->
-  <div
-    ref="closeSidebar"
-    :class="{ 'translate-x-0': isOpen, '-translate-x-full': !isOpen }"
-    class="bg-[#151719] z-50 absolute left-0 w-[75%] top-0 transform transition-transform duration-300 ease-in-out p-8 text-white space-y-4 h-[100dvh] md:w-[45%] xl:hidden"
-  >
-    <router-link
-      to="/about"
-      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md"
-    >
-      About
+  <div ref="closeSidebar" :class="{ 'translate-x-0': isOpen, '-translate-x-full': !isOpen }"
+    class="bg-[#151719] z-50 absolute left-0 w-[75%] top-0 transform transition-transform duration-300 ease-in-out p-8 text-white space-y-4 h-[100dvh] md:w-[45%] xl:hidden">
+    <router-link to="/about"
+      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
+      Why Us
     </router-link>
-    <a href="/#feature" 
-      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md"
-    >
-      Feature
+    <a href="/#feature"
+      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
+      Features
     </a>
-    <a href="/#why"
-      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md"
-    >
+    <!-- <a href="/#why"
+      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Why us
-    </a>
-    <a  href="/#pricing"
-      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md"
-    >
+    </a> -->
+    <a href="/#pricing"
+      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Pricing
     </a>
     <a href="/#faq"
-      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md"
-    >
+      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       FAQ
     </a>
 
     <div class="flex gap-4" v-if="!logged">
-      <button class="border-btn">Sign Up</button>
+      <!-- <button class="border-btn">Sign Up</button> -->
       <button @click="togglePopup(true)" class="bg-btn">Login</button>
     </div>
 
@@ -221,20 +208,11 @@ const logout = async () => {
   <Popup :isOpen="isPopupOpen" @close="togglePopup(false)" class="">
     <div class="p-4 h-full">
       <div class="">
-        <img
-          src="/svg/fusionx_logo_white.svg"
-          class="mx-auto xl:ml-0 w-[180px]"
-        />
+        <img src="/svg/fusionx_logo_white.svg" class="mx-auto xl:ml-0 w-[180px]" />
       </div>
       <div class="mt-6 space-y-6">
-        <form
-          @submit.prevent="login"
-          @keydown.enter.prevent="handleEnterKey"
-          class="flex flex-col gap-4 text-white"
-        >
-          <div
-            class="tracking-wide text-center leading-tight xl:text-left space-y-3"
-          >
+        <form @submit.prevent="login" @keydown.enter.prevent="handleEnterKey" class="flex flex-col gap-4 text-white">
+          <div class="tracking-wide text-center leading-tight xl:text-left space-y-3">
             <p class="font-bold text-[37px]">Welcome back!</p>
             <p class="nrml-text opacity-60">
               Trade smarter with breakout strategies. Log in to track your
@@ -244,17 +222,9 @@ const logout = async () => {
 
           <div class="space-y-1">
             <label class="sm-text">Email</label>
-            <div
-              class="flex items-center rounded-md border border-white border-opacity-25"
-            >
-              <input
-                type="email"
-                id="email"
-                placeholder="yourname@gmail.com"
-                autocomplete="off"
-                v-model="loginFormData.email"
-                class="bg-transparent w-full py-3 px-4 outline-none sm-text"
-              />
+            <div class="flex items-center rounded-md border border-white border-opacity-25">
+              <input type="email" id="email" placeholder="yourname@gmail.com" autocomplete="off"
+                v-model="loginFormData.email" class="bg-transparent w-full py-3 px-4 outline-none sm-text" />
             </div>
             <p v-if="errors.email" class="text-red-500 sm-text">
               {{ errors.email }}
@@ -263,23 +233,11 @@ const logout = async () => {
 
           <div class="space-y-1">
             <label class="sm-text">Password</label>
-            <div
-              class="flex items-center rounded-md border border-white border-opacity-25"
-            >
-              <input
-                placeholder="Password"
-                :type="showPassword ? 'text' : 'password'"
-                autocomplete="off"
-                class="bg-transparent w-full py-3 px-4 outline-none sm-text"
-                id="password"
-                v-model="loginFormData.password"
-              />
-              <button
-                type="button"
-                tabindex="-1"
-                @click="showPassword = !showPassword"
-                class="mx-3 opacity-60"
-              >
+            <div class="flex items-center rounded-md border border-white border-opacity-25">
+              <input placeholder="Password" :type="showPassword ? 'text' : 'password'" autocomplete="off"
+                class="bg-transparent w-full py-3 px-4 outline-none sm-text" id="password"
+                v-model="loginFormData.password" />
+              <button type="button" tabindex="-1" @click="showPassword = !showPassword" class="mx-3 opacity-60">
                 <i v-if="showPassword" class="pi pi-eye"></i>
                 <i v-else class="pi pi-eye-slash"></i>
               </button>
@@ -298,19 +256,11 @@ const logout = async () => {
               <input type="checkbox" id="terms" v-model="checked" />
               <p class="nrml-text">
                 I agree with FusionX
-                <a
-                  target="_blank"
-                  class="text-custom-teal font-bold underline underline-offset-4"
-                  href="/terms/t&c"
-                  >T&C</a
-                >
+                <a target="_blank" class="text-custom-teal font-bold underline underline-offset-4"
+                  href="/terms/t&c">T&C</a>
                 |
-                <a
-                  class="text-custom-teal font-bold underline underline-offset-4"
-                  href="/terms/disclosure"
-                  target="_blank"
-                  >Disclosure</a
-                >
+                <a class="text-custom-teal font-bold underline underline-offset-4" href="/terms/disclosure"
+                  target="_blank">Disclosure</a>
               </p>
             </div>
             <p v-if="termsError" class="text-red-500 nrml-text">
@@ -318,38 +268,24 @@ const logout = async () => {
             </p>
           </div>
 
-          <button
-            type="submit"
-            :disabled="!checked || requested"
-            class="bg-custom-teal w-full py-2 rounded-full"
+          <button type="submit" :disabled="!checked || requested" class="bg-custom-teal w-full py-2 rounded-full"
             :class="{
               'cursor-pointer': checked && !requested,
               'bg-custom-teal cursor-not-allowed opacity-50':
                 !checked || requested,
-            }"
-          >
+            }">
             <div v-if="requested" class="w-7 h-7 mx-auto">
-              <div
-                class="animate-spin rounded-full h-full w-full border-b-2 border-white"
-              ></div>
+              <div class="animate-spin rounded-full h-full w-full border-b-2 border-white"></div>
             </div>
-            <div v-else>Login</div>
+            <div v-else class>Login</div>
           </button>
         </form>
       </div>
 
-      <div
-        v-if="activeForm === 'forgot'"
-        class="flex flex-col items-start text-white"
-      >
+      <div v-if="activeForm === 'forgot'" class="flex flex-col items-start text-white">
         <div class="flex items-center gap-x-2">
-          <button
-            @click="showForm('login')"
-            class="pi pi-angle-left text-[30px]"
-          ></button>
-          <h1
-            class="font-bold tracking-wide text-center leading-[30px] md:leading-[50px] xl:text-left text-[1.5rem]"
-          >
+          <button @click="showForm('login')" class="pi pi-angle-left text-[30px]"></button>
+          <h1 class="font-bold tracking-wide text-center leading-[30px] md:leading-[50px] xl:text-left text-[1.5rem]">
             Forgot Password
           </h1>
         </div>
@@ -364,10 +300,7 @@ const logout = async () => {
         </div>
 
         <div class="mt-4 flex items-center gap-8">
-          <button
-            @click="signInWithGoogle"
-            class="pi pi-google text-[25px]"
-          ></button>
+          <button @click="signInWithGoogle" class="pi pi-google text-[25px]"></button>
           <button class="pi pi-apple text-[25px]"></button>
           <button class="pi pi-microsoft text-[25px]"></button>
         </div>
@@ -375,10 +308,34 @@ const logout = async () => {
 
       <p class="nrml-text text-white text-center mt-4">
         Don't have an account?
-        <router-link to="/" class="font-semibold text-custom-teal"
-          >Sign up</router-link
-        >
+        <router-link to="/" class="font-semibold text-custom-teal">Sign up</router-link>
       </p>
     </div>
   </Popup>
 </template>
+
+
+<style scoped>
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shine-text {
+  background: linear-gradient(90deg,
+      #0C1219 0%,
+      #0C1219 35%,
+      white 50%,
+      #0C1219 65%,
+      #0C1219 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+}
+</style>

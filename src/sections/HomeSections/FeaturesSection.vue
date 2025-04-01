@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="max-w-6xl 2xl:max-w-7xl mx-auto py-20 px-4 xl:px-0">
+  <section class="max-w-6xl 2xl:max-w-7xl mx-auto mt-16 lg:mt-24 py-20 px-4 xl:px-0">
     <div class="text-center">
       <h1 class="font-bold text-[30px]">Key Features at a Glance</h1>
       <p class="nrml-text">Powerful Tools for Automated, Profitable Trading</p>
@@ -9,12 +9,12 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 mt-16 gap-8">
       <div
-        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
+        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl overflow-hidden flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
       >
         <div class="absolute top-0 left-0">
           <img src="/svg/spotlight2.svg" alt="" />
         </div>
-        <img src="/images/feature1.webp" alt="" class="xl:max-w-[500px]" />
+        <img src="/images/feature1.webp" alt="" class="xl:max-w-[500px]  " />
 
         <div class="space-y-2">
           <p class="text-custom-teal font-bold text-[19px]">
@@ -28,7 +28,7 @@
       </div>
 
       <div
-        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
+        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl overflow-hidden flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
       >
         <div class="absolute top-0 left-0">
           <img src="/svg/spotlight2.svg" alt="" />
@@ -49,7 +49,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 mt-8 gap-6">
       <div
-        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
+        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl overflow-hidden flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
       >
         <div class="absolute top-0 left-0">
           <img src="/svg/spotlight2.svg" alt="" />
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div
-        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
+        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl overflow-hidden flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
       >
         <div class="absolute top-0 left-0">
           <img src="/svg/spotlight2.svg" alt="" />
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div
-        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl flex flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
+        class="border border-white border-opacity-20 py-4 px-8 rounded-3xl flex overflow-hidden flex-col items-center justify-between relative hover:scale-105 transition duration-300 ease-in-out"
       >
         <div class="absolute top-0 left-0">
           <img src="/svg/spotlight2.svg" alt="" />

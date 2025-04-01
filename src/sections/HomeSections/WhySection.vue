@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="bg-white bg-opacity-5 py-20 px-4 xl:px-0">
+    <section class="bg-white bg-opacity-5 py-20 lg:py-32 mt-24 px-4 xl:px-0">
         <div class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="w-full md:w-[50%] xl:w-[40%] space-y-6">
                 <h2 class="font-bold leading-tight text-[30px]">
