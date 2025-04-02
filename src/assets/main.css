@@ -44,3 +44,23 @@ body {
 .bg-btn{
     @apply border border-custom-teal bg-custom-teal text-black font-bold px-6 py-2 rounded-full
 }
+
+.title-text{
+    @apply  font-bold text-[14px] sm:text-[16px]
+}
+
+.nrml-text{
+    @apply  tracking-wide text-[12px] md:text-[14px]
+}
+
+.small-text{
+    @apply text-[11px]
+}
+
+.recommended-bg-tag{
+    @apply text-[9px] md:text-[10px] bg-custom-orange px-2 py-[2px] rounded-md font-extrabold tracking-wide uppercase text-black flex items-center h-fit
+}
+
+.no-bg-tag{
+    @apply small-text bg-white bg-opacity-10 px-2 py-[2px] rounded-md font-extrabold tracking-wider text-white
+}

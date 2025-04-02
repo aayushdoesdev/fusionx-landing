@@ -30,6 +30,12 @@ const router = useRouter();
               :class="{ 'text-custom-teal': route.path === '/about' }"
               >Why Us</router-link
             >
+            <router-link
+              to="/strategy"
+              class="hover-text"
+              :class="{ 'text-custom-teal': route.path === '/strategy' }"
+              >Strategy</router-link
+            >
             <a href="/#feature" class="hover-text">Features</a>
             <!-- <a href="/#why" class="hover-text">Why Us</a> -->
             <a href="/#pricing" class="hover-text">Pricing</a>
@@ -221,7 +227,7 @@ const router = useRouter();
           <router-link to="/terms-and-conditions?tab=disclaimer">Disclaimer</router-link>
           <router-link to="/terms-and-conditions?tab=disclosure">Disclosure</router-link>
           <router-link to="/terms-and-conditions?tab=refund">Refund Policy</router-link>
-          <router-link to="/terms-and-conditions?tab=grievance">Grievance</router-link>
+          <router-link to="/terms-and-conditions?tab=grievance">Grievances</router-link>
         </div>
         <hr class="w-full opacity-20" />
       </div>

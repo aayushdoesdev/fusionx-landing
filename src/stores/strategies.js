@@ -14,16 +14,18 @@ export const useStrategiesStore = defineStore('strategies', () => {
   const billingPeriod = ref("yearly");
 
   const stgEditorData = ref('')
-  const url = ref(`${baseApiUrl.value}/user/web/products`)
-
+  const url = ref(`${baseApiUrl.value}/user/web/products?type=fusion`)
 
   async function getStrategies() {
     try {
       
       const res = await axios.get(url.value, { headers: { Authorization: authToken } });
+      // const res = {data: mockData}
       const response = res.data || {}
       // console.log("print response", response)
       let data = response.data || []
+      // let data = response || []
+      products.value = data
       setProducts(data)
 
     } catch (error) {
@@ -65,8 +67,8 @@ export const useStrategiesStore = defineStore('strategies', () => {
 
 
   const setProducts = (data = []) => {
-    let processedData = data.map(({ strategies, ...rest }) => rest);
-    let temp = addTimelyPrice(processedData)
+    // let processedData = data.map(({ strategies, ...rest }) => rest);
+    let temp = addTimelyPrice(data)
     products.value = temp;
   };
 

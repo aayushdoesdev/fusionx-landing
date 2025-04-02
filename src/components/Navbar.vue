@@ -149,6 +149,8 @@ const logout = async () => {
     <div class="hidden text-white xl:flex items-center gap-8">
       <router-link to="/about" class="hover-text"
         :class="{ 'text-custom-teal': route.path === '/about' }">Why Us</router-link>
+      <router-link to="/strategy" class="hover-text"
+        :class="{ 'text-custom-teal': route.path === '/strategy' }">Strategy</router-link>
       <a href="/#feature" class="hover-text">Features</a>
       <!-- <a href="/#why" class="hover-text">Why Us</a> -->
       <a href="/#pricing" class="hover-text">Pricing</a>
@@ -177,6 +179,10 @@ const logout = async () => {
     <router-link to="/about"  @click="isOpen = false"
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
       Why Us
+    </router-link>
+    <router-link to="/strategy"  @click="isOpen = false"
+      class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
+      Strategy
     </router-link>
     <a href="/#feature"  @click="isOpen = false"
       class="text-[18px] hover:bg-white hover:bg-opacity-20 transition-all w-full flex items-start px-4 py-2 rounded-md">
@@ -256,11 +262,9 @@ const logout = async () => {
               <input type="checkbox" id="terms" v-model="checked" />
               <p class="nrml-text">
                 I agree with FusionX
-                <a target="_blank" class="text-custom-teal font-bold underline underline-offset-4"
-                  href="/terms/t&c">T&C</a>
+                <router-link to="/terms-and-conditions?tab=terms" class="text-custom-teal font-bold underline underline-offset-4">T&C</router-link>
                 |
-                <a class="text-custom-teal font-bold underline underline-offset-4" href="/terms/disclosure"
-                  target="_blank">Disclosure</a>
+                <router-link to="/terms-and-conditions?tab=disclosure" class="text-custom-teal font-bold underline underline-offset-4">Disclosure</router-link>
               </p>
             </div>
             <p v-if="termsError" class="text-red-500 nrml-text">
@@ -308,7 +312,7 @@ const logout = async () => {
 
       <p class="nrml-text text-white text-center mt-4">
         Don't have an account?
-        <router-link to="/" class="font-semibold text-custom-teal">Sign up</router-link>
+        <a href="https://app.fusionxtech.in/" target="_blank" class="font-semibold text-custom-teal">Sign up</a>
       </p>
     </div>
   </Popup>

@@ -58,7 +58,7 @@ onMounted(() => {
         <button class="bg-btn">
           <a href="https://calendly.com/officialfusionxtech/30min" target="_blank">Get a Call Back</a>
         </button>
-        <button class="border-btn">Open an Account</button>
+        <a href="https://app.fusionxtech.in/" target="_blank" class="border-btn">Open an Account</a>
       </div>
     </div>
     <div class="w-full xl:w-[50%] h-full">

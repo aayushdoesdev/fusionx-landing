@@ -20,18 +20,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="bg-custom-teal px-4 py-10 md:py-20 xl:px-0">
-    <div class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col items-center justify-center space-y-12 md:space-y-8 animate-on-scroll">
-      <div class="text-center">
-        <h1 class="font-bold text-[30px] leading-tight">Trade Smarter with Proven Strategies</h1>
-        <p class="nrml-text w-[80%] mx-auto">
-            Join thousands of traders using our platform to automate their trades and maximize profits—without writing a single line of code.
-        </p>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="https://calendly.com/officialfusionxtech/30min" target="_blank" class="border border-white rounded-full px-6 py-2">Get a Call Back</a>
-        <a href="https://app.fusionxtech.in/" target="_blank" class="border border-white rounded-full px-6 py-2">Open an Account</a>
-      </div>
+  <section
+    class="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col justify-center items-center px-4 py-10 xl:px-0 space-y-8 animate-on-scroll"
+  >
+    <div
+      class="space-y-2 text-center max-w-6xl 2xl:max-w-7xl mx-auto relative z-20"
+    >
+      <h1 class="text-custom-teal font-bold text-[30px]">Why Use Our Strategies?</h1>
+      <p class="nrml-text lg:w-[80%] mx-auto">
+        Honestly? We built this platform because we were tired of missing out. Missing profitable trades because we had a meeting. Losing sleep over volatile markets. Watching complex trading platforms that only techies could understand.
+      </p>
+    </div>
+
+    <div class="w-full xl:w-[70%] mx-auto">
+        <img src="/images/why_our_strategies.png" alt="">
     </div>
   </section>
 </template>
