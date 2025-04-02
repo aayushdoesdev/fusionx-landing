@@ -58,10 +58,12 @@ const toggleTermType = (button) => {
   <main class="max-w-4xl mx-auto">
     <div class="">
       <div class="p-4">
-        <img
+        <router-link to="/">
+          <img
           src="/svg/fusionx_logo_white.svg"
           class="mx-auto xl:ml-0 w-[180px]"
         />
+        </router-link>
       </div>
 
       <div

@@ -7,8 +7,8 @@ const authToken = ref('');
 authToken.value = localStorage.getItem('token')
 
 const baseUrl = ref("http://localhost:3008");
-// const baseApiUrl = ref("https://app.matrixtradingtech.com");
-const baseApiUrl = ref("https://vlqf88cf-8082.inc1.devtunnels.ms");
+const baseApiUrl = ref("https://app.fusionxtech.in");
+// const baseApiUrl = ref("https://vlqf88cf-8082.inc1.devtunnels.ms");
 
 const endpoints = ref({
   blogs: '/api/blogs',

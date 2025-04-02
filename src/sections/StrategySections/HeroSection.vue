@@ -85,7 +85,7 @@ onMounted(() => {
     <div
       class="border border-white bg-white bg-opacity-20 w-fit px-6 py-2 rounded-full nrml-text"
     >
-      <p>❤️ Loved by 5 lakh+ investors</p>
+      <p>❤️ Smart Automation For Smart Traders</p>
     </div>
 
     <h1

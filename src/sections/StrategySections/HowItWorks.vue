@@ -34,22 +34,22 @@ onMounted(() => {
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-        <div class="bg-custom-teal py-4 px-8 rounded-xl nrml-text space-y-4">
-            <p class="font-bold text-[30px]">01</p>
+        <div class="border border-white border-opacity-25 hover:bg-custom-teal py-4 px-8 rounded-xl nrml-text space-y-4 transition-all text-custom-teal hover:text-white">
+            <p class="font-bold text-[30px] text-white">01</p>
             <p class="font-semibold">Pick a Strategy</p>
-            <p>Choose from a range of backtested, high-performance strategies designed for different market conditions.</p>
+            <p class="text-white">Choose from a range of backtested, high-performance strategies designed for different market conditions.</p>
         </div>
 
-        <div class="bg-custom-teal py-4 px-8 rounded-xl nrml-text space-y-4">
-            <p class="font-bold text-[30px]">02</p>
+        <div class="border border-white border-opacity-25 hover:bg-custom-teal py-4 px-8 rounded-xl nrml-text space-y-4 transition-all text-custom-teal hover:text-white">
+            <p class="font-bold text-[30px] text-white">02</p>
             <p class="font-semibold">Customize Your Settings</p>
-            <p>Adjust lot size, re-entry rules, and risk preferences to match your investment goals.</p>
+            <p class="text-white">Adjust lot size, re-entry rules, and risk preferences to match your investment goals.</p>
         </div>
 
-        <div class="bg-custom-teal py-4 px-8 rounded-xl nrml-text space-y-4">
-            <p class="font-bold text-[30px]">03</p>
-            <p class="font-semibold">Deploy & Let It Run</p>
-            <p>Our system automates your trades, managing risks and executing strategies in real-time.</p>
+        <div class="border border-white border-opacity-25 hover:bg-custom-teal py-4 px-8 rounded-xl nrml-text space-y-4 transition-all text-custom-teal hover:text-white">
+            <p class="font-bold text-[30px] text-white">03</p>
+            <p class="font-bold ">Deploy & Let It Run</p>
+            <p class="text-white">Our system automates your trades, managing risks and executing strategies in real-time.</p>
         </div>
       </div>
     </div>

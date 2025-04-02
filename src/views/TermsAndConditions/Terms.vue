@@ -274,14 +274,6 @@
       <p class="mb-2">Centralized Fee Collection Mechanism (CeFCoM): This initiative by SEBI is designed to ensure that investor payments are securely directed to genuine SEBI-registered advisors rather than to other sources. It enables investors to monitor all payments made to SEBI-registered advisors.</p>
       <p class="mb-2">Investors can request a link for the Centralized Fee Collection Mechanism (CeFCoM) from registered Research Analysts and can make payments using UPI, credit cards, auto-debit, bank account details, and more.</p>
     </section>
-
-    <div class="mt-8">
-      <p class="font-semibold">Thanks, and Regards</p>
-      <p class="mt-4">Investor/Client Name: ________________________</p>
-      <p class="mt-2">Date: ________________________</p>
-      <p class="mt-2">Place: ________________________</p>
-      <p class="mt-2">Signature: ________________________</p>
-    </div>
   </div>
 </template>
   
