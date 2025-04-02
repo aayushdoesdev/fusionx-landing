@@ -216,12 +216,12 @@ const router = useRouter();
         <div
           class="flex justify-center items-center w-full text-[11px] gap-4 opacity-50"
         >
-          <p>Privacy Policy</p>
-          <p>Terms and Conditions</p>
-          <p>Disclaimer</p>
-          <p>Disclosure</p>
-          <p>Refund Policy</p>
-          <p>Privacy Policy</p>
+          <router-link to="/terms-and-conditions?tab=terms">Terms and Conditions</router-link>
+          <router-link to="/terms-and-conditions?tab=privacy">Privacy Policy</router-link>
+          <router-link to="/terms-and-conditions?tab=disclaimer">Disclaimer</router-link>
+          <router-link to="/terms-and-conditions?tab=disclosure">Disclosure</router-link>
+          <router-link to="/terms-and-conditions?tab=refund">Refund Policy</router-link>
+          <router-link to="/terms-and-conditions?tab=grievance">Grievance</router-link>
         </div>
         <hr class="w-full opacity-20" />
       </div>
